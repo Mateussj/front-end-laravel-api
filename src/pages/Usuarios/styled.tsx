@@ -87,7 +87,7 @@ export const TableUsers = styled.table`
 export const TableTr = styled.tr`
      background-color: white;
      &:hover{
-          background-color: #04AA6D;
+          background-color: #3d9db3;
           color: black;
      }
 `;
@@ -112,3 +112,125 @@ export const TableTd = styled.td`
     border: 1px solid #ddd;
     padding: 8px;
    `;
+
+export const H1Modal = styled.h1`
+     font-size: 48px;
+     color: #066a75 !important;
+     padding: 5px 0;
+     font-family: Arial,sans-serif;
+     font-weight: bold;
+     text-align: center;
+     &:after {
+          content: ' ';
+          display: block;
+          width: 100%;
+          height: 2px;
+          margin-top: 10px;
+          background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+          background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+     }
+`;
+
+export const DivModal = styled.div`
+     display:flex;
+     flex-direction: column;
+     margin: 30px;
+`;
+
+export const FormModal = styled.form`
+     display:flex;
+     flex-direction: column;
+ 
+`;
+
+export const LabelForm = styled.label`
+  color: #405c60;
+  position: relative;
+`
+export const ButtonModal = styled.button`
+width: 100%!important;
+  cursor: pointer;  
+  background: #3d9db3;
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff; 
+  margin-bottom: 10px;  
+  text-shadow: 0 1px 1px #333;
+  
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  
+  transition: all 0.2s linear;
+  &:hover{
+     background: #4ab3c6;
+  }
+`
+
+export const InputModal = styled.input`
+     width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: 1px solid #b2b2b2;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+`
+
+export const DivButton = styled.div`
+  magin: 100px;
+  display: flex;
+  flex-direction: row;
+`
+
+export const ButtonNew = styled.button`
+  width: 10%!important;
+  cursor: pointer;  
+  background: #3d9db3;
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff; 
+  margin-bottom: 10px;  
+  text-shadow: 0 1px 1px #333;
+  
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  
+  transition: all 0.2s linear;
+  &:hover{
+     background: #4ab3c6;
+     scale: 1.2;
+  }
+`
+
+export const ImgContainerPage = styled.img`
+width: 30px;
+height: 30px;
+margin-right: 10px;
+border-radius:50px;
+`;
+
+export const ButtonPageAvancar = styled.button`
+     color: #ecf0f1;
+     font-size: 17px;
+     background-color: #3d9db3;
+     border: 1px solid white;
+     border-radius: 5px;
+     padding: 10px;
+     margin: 10px;
+     transition: all .1s;
+`
+export const ButtonPageVoltar = styled.button`
+     color: #ecf0f1;
+     font-size: 17px;
+     background-color: #3d9db3;
+     border: 1px solid white;
+     border-radius: 5px;
+     padding: 10px;
+     margin: 10px;
+     transition: all .1s;
+`

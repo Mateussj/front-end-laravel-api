@@ -112,3 +112,15 @@ export const TableTd = styled.td`
     border: 1px solid #ddd;
     padding: 8px;
    `;
+
+   export const ButtonPage = styled.button`
+   color: #ecf0f1;
+   font-size: 17px;
+   background-color: #3d9db3;
+   border: 1px solid white;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 10px;
+   transition: all .1s;
+   width: 30%;
+`

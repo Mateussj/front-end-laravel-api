@@ -1,5 +1,5 @@
 import SideBar from "../../components/SideBar"
-import { HrSearch, Container, ConteudoContainer, BodyContainer,Body,H1Container, HeaderContainer, ImgContainer, TableUsers, TableTr, TableTh, TableTd } from './styled';
+import { HrSearch, Container, ConteudoContainer, BodyContainer,Body,H1Container, HeaderContainer, ImgContainer, TableUsers, TableTr, TableTh, TableTd, ButtonPage } from './styled';
 import users from "../../assets/usuarios.png"
 import { useEffect, useState } from "react";
 import TableData from "../../components/TableData";
@@ -9,7 +9,7 @@ import { BsFillPencilFill, BsFillTrash3Fill } from "react-icons/bs";
 
 export default function Fake(){
      
-     const [fake, setFake] = useState();
+     const [fake, setFake] = useState(0);
      const [count, setCount] = useState(0);
 
      useEffect(() => {
@@ -27,9 +27,28 @@ export default function Fake(){
      }, []);
 
      function getUsers(){
-          api.get('/api/users').then(async response => {
-               setFake(response.data.total);
-          });
+          try {
+               api.get('/api/users').then(async response => {
+                    setFake(response.data.total);
+               });
+          } catch (error) {
+               
+          }
+          
+     }
+
+     function solicitarInsercao() {
+          let resultado = window.confirm("Está ação fara com que 100 mil usuarios seja, cadastrados no banco e pode demorar um pouco, deseja prosseguir?");
+          if(resultado){
+               api.get('/api/fake').then(async response => {
+                    if(response.status === 200){
+                         window.alert(response.data.message);
+                    } else {
+                         window.alert("Algo deu errado!");
+                    }
+                        
+               });
+          }
      }
      return (
 
@@ -44,8 +63,10 @@ export default function Fake(){
                      <HrSearch/>
                          <BodyContainer>
                          
-                         <H1Container>Quantidade de usuarios cadastrados: {fake} {count}</H1Container>
+                         <H1Container>Quantidade de usuarios cadastrados: {fake} </H1Container>
                          </BodyContainer>
+                         
+                         <ButtonPage onClick={()=> {solicitarInsercao()}} type="button">Solicitar Inserção de usuarios</ButtonPage>
                     </Body>
                </ConteudoContainer>
           </Container>

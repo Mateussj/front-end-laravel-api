@@ -38,7 +38,7 @@ export default function Fake(){
      }
 
      function solicitarInsercao() {
-          let resultado = window.confirm("Está ação fara com que 100 mil usuarios seja, cadastrados no banco e pode demorar um pouco, deseja prosseguir?");
+          let resultado = window.confirm("Está ação fara com que 100 mil usuarios sejam cadastrados no banco de dados e pode demorar um pouco, deseja prosseguir?");
           if(resultado){
                api.get('/api/fake').then(async response => {
                     if(response.status === 200){

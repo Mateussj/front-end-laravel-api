@@ -6,6 +6,7 @@ import TableData from "../../components/TableData";
 import api from "../../services";
 import { count } from "console";
 import { BsFillPencilFill, BsFillTrash3Fill } from "react-icons/bs";
+import TopBar from "../../components/TopBar";
 
 export default function Fake(){
      
@@ -53,6 +54,7 @@ export default function Fake(){
      return (
 
           <Container>
+               <TopBar location={"fake"}/>
                <SideBar location={"fake"}/>
                <ConteudoContainer>
                     <Body>

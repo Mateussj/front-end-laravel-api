@@ -6,6 +6,7 @@ import TableData from "../../components/TableData";
 import api from "../../services";
 import { count } from "console";
 import { BsFillPencilFill, BsFillTrash3Fill } from "react-icons/bs";
+import TopBar from "../../components/TopBar";
 
 export default function Matriz(){
      
@@ -18,16 +19,11 @@ export default function Matriz(){
 
      return (
           <Container>
+               <TopBar location={"matriz"}/>
                <SideBar location={"matriz"}/>
                <ConteudoContainer>
                     <Body>
-                    <HeaderContainer>
-                         <H1Container><ImgContainer src={users} className="" alt="foguete" /> Matriz</H1Container>
-                    
-                    </HeaderContainer>
-                     <HrSearch/>
                          <BodyContainer>
-                         
                          <H1Container>{matriz}</H1Container>
                          </BodyContainer>
                     </Body>

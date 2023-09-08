@@ -6,15 +6,18 @@ import {
      ParagrafoContainer
 } from './styled';
 import discussion from "./../../assets/discussion.png";
+import { MdAddReaction } from "react-icons/md";
 
 export default function Card(props: any){
      return (
+          <>
           <CardContainer id={props.id}>
-               <ImgContainer src={discussion} className="" alt="discussion" />
+               <MdAddReaction size={50} color='black' />
                <ConteudoCard>
-                    <CardContainerTitulo>{props.dados.title}<hr/></CardContainerTitulo>
-                    <ParagrafoContainer>{props.dados.body}</ParagrafoContainer>                    
+                    <CardContainerTitulo>{props.dados.user.nome}</CardContainerTitulo>
+                    <ParagrafoContainer>{props.dados.conteudo}</ParagrafoContainer>                    
                </ConteudoCard>
           </CardContainer>
-     );
+          </>
+          );
 }

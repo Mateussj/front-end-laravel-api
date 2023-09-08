@@ -4,6 +4,7 @@ import { HrSearch, HomeContainer, ConteudoContainer, BodyContainer,Body,H1Contai
 import Card from '../../components/Card';
 import api from "../../services";
 import posts from "../../assets/posts.png"
+import TopBar from '../../components/TopBar';
 
 export default function HomePage(){
 
@@ -13,27 +14,22 @@ export default function HomePage(){
     (async () => {
       let res = await api.get('api/posts');
       console.log(res.data);
-      setLancamentos(res.data.reverse());
+      setLancamentos(res.data.data.reverse());
     })();
   }, []);
 
   return (
     <HomeContainer>
+      <TopBar location={"Home"}/>
       <SideBar location={"Home"}/>
       <ConteudoContainer>
         <Body>
-          <HeaderContainer>
-            
-            <H1Container><ImgContainer src={posts} className="" alt="foguete" /> Posts</H1Container>
-
-          </HeaderContainer>
-          <HrSearch/>
           <BodyContainer>
 
             { 
             lancamentos.map((item: any, key: number) => {
               console.log(key)
-              return (<Card id={key} dados={item}/>)
+              return (<><Card id={key} dados={item}/><Card id={key} dados={item}/></>)
               })
             }
             

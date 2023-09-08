@@ -5,16 +5,16 @@ export const ConteudoCard = styled.div`
      display: flex;
      align-items: start;
      flex-direction: column;
-     font-family: sans;
+     font-family: Arial,sans-serif;
 `;
-export const CardContainerTitulo = styled.h1`
+export const CardContainerTitulo = styled.p`
      color: black;
+     font-size: 20px;
      align-items: center;
      font-weight: bold;
      margin: 10px;
 `;
 export const CardContainer = styled.div`
-     width: 100%;
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -22,14 +22,14 @@ export const CardContainer = styled.div`
      padding: 10px;     
      justify-content: space-between;
      background-color: white;
-     border-radius: 0px 25px 25px 25px;
+     border-radius: 5px 5px 5px 5px;
      box-shadow: 10px 10px 10px 10px balck;
-     width: 90%;
-     height: 180px;
+     width: 1200px;
+     height: 100px;
      overflow: hidden;
+     background-color: #c0c0c0;
      &:hover{
-          scale: 1.1;
-          background-color: #EBEBEB;
+          background-color: ##c0c0c0;
      }
 `;
 

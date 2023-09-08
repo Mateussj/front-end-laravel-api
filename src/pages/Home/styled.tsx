@@ -9,6 +9,8 @@ export const ConteudoContainer = styled.div`
      display: flex;
      color: white;
      padding: 10px;
+     margin-left: 170px;
+     margin-top: 60px;
 `;
 
 export const Body = styled.div`
@@ -65,7 +67,7 @@ export const InputSearch = styled.input`
      border: 2px solid white;
      border-radius: 50px;
      box-sizing: border-box;
-     font-family: Comic Sans MS;
+     font-family: Arial,sans-serif;
      font-size: 26px;
      color: white;
      outline: none;

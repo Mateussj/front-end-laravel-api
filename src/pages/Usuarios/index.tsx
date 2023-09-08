@@ -10,6 +10,7 @@ import { count } from "console";
 import { BsFillPencilFill, BsFillTrash3Fill } from "react-icons/bs";
 import Modal from 'react-modal';
 import { format } from 'date-fns';
+import TopBar from "../../components/TopBar";
 
 const customStyles = {
      content: {
@@ -195,13 +196,10 @@ export default function Usuarios(){
 
      return (
           <Container>
+               <TopBar location={"users"}/>
                <SideBar location={"users"}/>
                <ConteudoContainer>
                     <Body>
-                    <HeaderContainer>
-                         <H1Container><ImgContainer src={users} className="" alt="foguete" /> Posts</H1Container>
-                    </HeaderContainer>
-                     <HrSearch/>
                          <BodyContainer>
                          <ButtonNew onClick={()=>openModal(null)}>Novo usuário</ButtonNew>
                          <TableUsers>

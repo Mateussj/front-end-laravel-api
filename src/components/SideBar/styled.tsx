@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const SideBarContainer = styled.div`
      display: flex;
-     flex: 0 0 200px; /* Define a largura da barra lateral */
+     flex: 0 0 100px; /* Define a largura da barra lateral */
      align-items: center;
-     color: white;
-     padding: 0px;
-     font-family: sans;
+     color: black;
+     margin-top: 30px;
+     margin-left: -10px;
+     font-family: Arial,sans-serif;
      font-weight: bold;
+     position: fixed;
 `;
 
 export const HrContainer = styled.hr`
@@ -22,27 +24,30 @@ export const UlContainer = styled.ul`
      text-decoration: none;
      list-style: none;
      padding-top: 60px;
+     whidth: 100%;
+     height: 100%;
 `;
+
 export const LiContainer = styled.li`
-     background-color: ${(props) => props.className === "active" ? 'white' : ''};
-     border-radius: ${(props) => props.className === "active" ? '0 30px 30px 0px' : ''};
-     .sp {
-          display: ${(props) => props.className === "active" ? 'none' : ''};;
-     }
+     background-color: ${(props) => props.className === "active" ? '#202022' : ''};
+     color: ${(props) => props.className === "active" ? 'white' : '#202022'};
+     border-radius: ${(props) => props.className === "active" ? '0 5px 5px 0px' : ''};
      cursor: pointer;
      display: flex;
      align-items: center;
-     padding: 20px;
-     margin: 10px;
+     padding: 15px;
+     padding-right: 80px;
+     whidth: 100%;
+     margin: 5px;
      &:hover {
           .sp {
                opacity:1;
           }
-          background-color: white;
+          background-color: #CACACA;
           transition: all 0.5s ease;
-          border-radius: 0 30px 30px 0px;
-          padding: 20px;
-          margin: 10px;
+          border-radius: 0 5px 5px 0px;
+          padding-right: 80px;
+          margin: 5px;
      }
 `;
 export const ImgContainer = styled.img`
@@ -50,11 +55,7 @@ export const ImgContainer = styled.img`
      height: 80px;
 `;
 export const SpanContainer = styled.span`
-     opacity: 0;
-     color: #282c34;
+     opacity: 1;
      transition: opacity 0.3s ease;
      
 `;
-
-
-

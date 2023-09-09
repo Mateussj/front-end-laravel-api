@@ -17,14 +17,14 @@ export const CardContainerTitulo = styled.p`
 export const CardContainer = styled.div`
      display: flex;
      flex-direction: row;
-     align-items: center;
-     margin: 20px;
+     align-items: start;
+     margin: 10px;
      padding: 10px;     
      justify-content: space-between;
      background-color: white;
      border-radius: 5px 5px 5px 5px;
      box-shadow: 10px 10px 10px 10px balck;
-     width: 1200px;
+     width: 1100px;
      height: 100px;
      overflow: hidden;
      background-color: #c0c0c0;

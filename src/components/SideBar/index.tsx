@@ -6,7 +6,7 @@ export default function SideBar(props: any){
      return (
           <SideBarContainer>
                <UlContainer>
-               <Link to="/">
+               <Link to="/home">
                     <LiContainer className={props.location === "Home" ? "active" : ""}>
                          <MdGridView size={25} style={props.location === "Home" ? {marginRight: '5px', color:'white'} : {marginRight: '5px', color:'black'}}/>
                          <SpanContainer className="sp">Inicio</SpanContainer>

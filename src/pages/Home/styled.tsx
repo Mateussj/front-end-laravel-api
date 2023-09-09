@@ -7,26 +7,21 @@ export const HomeContainer = styled.div`
 `
 export const ConteudoContainer = styled.div`
      display: flex;
+     flex-direction: column;
      color: white;
      padding: 10px;
      margin-left: 170px;
-     margin-top: 60px;
+     margin-top: 70px;
+     width: 100%;
 `;
 
 export const Body = styled.div`
      width: 100%;
      display: flex;
      flex-direction: column;
+     align-items: center;
 `;
 
-export const H1Container = styled.h1`
-     display:flex;
-     font-size: 20px;
-     align-text: center;
-     margin-left: 20px;
-     margin-left: 20px;
-     
-`
 export const HeaderContainer = styled.div`
      width: 84%;
      display: flex;
@@ -39,10 +34,10 @@ export const BodyContainer = styled.div`
      width: 100%;
      display: flex;
      flex-direction: row;
+     align-items: start;
      flex-wrap: wrap;
      margin: 0px;
-
-     padding: px;
+     padding: 0px;
 `;
 
 export const IconSearch = styled.i`

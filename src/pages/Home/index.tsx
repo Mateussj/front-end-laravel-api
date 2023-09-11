@@ -13,7 +13,6 @@ export default function HomePage(){
   useEffect(() => {
     (async () => {
       await api.get('api/posts').then((response) => {
-        console.log(response.data);
         if(response.data.data.length > 0){
           setLancamentos(response.data.data.reverse());
         } else {
@@ -34,7 +33,6 @@ export default function HomePage(){
             <Body>
               { 
               lancamentos.map((item: any, key: number) => {
-                console.log(key)
                 return (<Card id={key} dados={item}/>)
                 })
               }

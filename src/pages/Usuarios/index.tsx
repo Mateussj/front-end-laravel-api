@@ -188,7 +188,6 @@ export default function Usuarios(){
           let resultado = window.confirm("Deseja mesmo deletar o usuario " + item.nome + ' ' + item.sobrenome + ' ? Lembre-se que esta ação é irreversível !');
           if(resultado){
                api.delete('/api/users/'+item.id).then(async response => {
-                    console.log(response.data.message);
                     getUsers();
                });
           }

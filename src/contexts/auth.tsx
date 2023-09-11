@@ -14,7 +14,7 @@ interface User {
 interface AuthContextData {
   user: User | null;
   bearer: string | null;
-  signIn: (email: string, password: string) => Promise<any>;
+  signIn: (email: string, password: string) => Promise<Boolean>;
   signOut: () => any;
   singned: () => any;
 }
@@ -46,17 +46,18 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const signIn = async (email: string, password: string) => {
     // Implemente sua lógica de autenticação aqui
     // Exemplo: chamar uma API para autenticar o usuário
-    await api.post('/api/login',{email, password}).then((response) => {
-        setUser(response.data.user);
-        setBearer(response.data.token);
-        localStorage.setItem('@laragramToken', response.data.token);
-        localStorage.setItem('@laragramUser', JSON.stringify(response.data.user));
-        toast.success(`Seja Bem-vindo(a) ` + response.data.user.nome + ' !');     
+    return await api.post('/api/login',{email, password}).then(async (response) => {
+        await setUser(response.data.user);
+        await setBearer(response.data.token);
+        await localStorage.setItem('@laragramToken', response.data.token);
+        await localStorage.setItem('@laragramUser', JSON.stringify(response.data.user));
+        toast.success(`Seja Bem-vindo(a) ` + response.data.user.nome + ' !');
+        return true;
     }).catch((error) => {
       toast.error(`Houve um erro ao tentar realizar o login, cheque suas credenciais !`); 
+      return false;
     });
 
-    return user;
   };
 
   const signOut = () => {
@@ -67,8 +68,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const singned = async () => {
     setUser(localStorage.getItem('@laragramUser'));
-    const ususario = localStorage.getItem('@laragramUser');
-    const token = localStorage.getItem('@laragramToken');
+    const ususario = await localStorage.getItem('@laragramUser');
+    const token = await localStorage.getItem('@laragramToken');
     if(ususario && token)
       return true;
     return false;

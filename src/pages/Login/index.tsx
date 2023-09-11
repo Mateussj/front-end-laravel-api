@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/auth';
 import { ButtonLogin, DivForm, DivPrincipal, FormLogin, H1Titulo, InputLogin } from './styled';
@@ -10,10 +10,16 @@ export default function SignIn(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { user, signIn, signOut } = useAuth();
+  const { user, signIn, singned } = useAuth();
 
   const navigate = useNavigate();
-  
+
+  useEffect(() => {
+    if(singned()){
+      navigate("/home");
+    }
+  }, [])
+
   async function handleSubmit(e : any){
     e.preventDefault();
 

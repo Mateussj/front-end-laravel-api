@@ -29,8 +29,8 @@ export const UlContainer = styled.ul`
 `;
 
 export const LiContainer = styled.li`
-     background-color: ${(props) => props.className === "active" ? '#202022' : ''};
-     color: ${(props) => props.className === "active" ? 'white' : '#202022'};
+     background-color: ${(props) => props.className === "active" ? '#F22E2E' : ''};
+     color: ${(props) => props.className === "active" ? 'white' : 'black'};
      border-radius: ${(props) => props.className === "active" ? '0 5px 5px 0px' : ''};
      cursor: pointer;
      display: flex;
@@ -43,7 +43,7 @@ export const LiContainer = styled.li`
           .sp {
                opacity:1;
           }
-          background-color: #CACACA;
+          background-color: #F29494;
           transition: all 0.5s ease;
           border-radius: 0 5px 5px 0px;
           padding-right: 80px;

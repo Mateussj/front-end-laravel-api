@@ -6,23 +6,23 @@ export default function TopBar(props: any){
      return (
         <DivTopBar>
             <DivLogo>
-                <MdWhatshot size={50}/> Laragram
+                <MdWhatshot size={50} color="#F22E2E"/> Laragram
             </DivLogo>
             <DivMenu>
                 <UlContainer>
                 <Link to="/">
                         <LiContainer className={props.location === "Home" ? "active" : ""}>
-                            <MdGridView size={37} style={{marginRight: '5px', color:'black'}}/>
+                            <MdGridView size={37} style={{marginRight: '5px', color:'#F22E2E'}}/>
                         </LiContainer>
                 </Link>
                 <Link to="/matriz"> 
                         <LiContainer className={props.location === "matriz" ? "active" : ""}>
-                            <MdPersonPin size={37} style={{marginRight: '5px', color:'black'}}/>
+                            <MdPersonPin size={37} style={{marginRight: '5px', color:'#F22E2E'}}/>
                         </LiContainer>
                 </Link>
                 <Link to="/users"> 
                         <LiContainer className={props.location === "users" ? "active" : ""}>
-                            <MdSupervisedUserCircle size={37} style={{marginRight: '5px', color:'black'}}/>
+                            <MdSupervisedUserCircle size={37} style={{marginRight: '5px', color:'#F22E2E'}}/>
                         </LiContainer>
                 </Link>
                 </UlContainer>

@@ -7,7 +7,7 @@ export const DivPrincipal = styled.div`
      align-items: center;
      justify-content: center;
      flex-direction: column;
-     background-color: #111111;
+     background-color: #F29494;
 `
 export const H1Titulo = styled.h1`
      text-align: center;
@@ -35,7 +35,7 @@ export const InputLogin = styled.input`
      border-radius: 10px;
      height: 50px;
      width: 300px;
-     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
      &:hover{
           scale: 1.1;
      }
@@ -45,9 +45,9 @@ export const ButtonLogin = styled.button`
      border: none;
      height: 50px;
      width: 300px;
-     background-color: #000000;
-     color: white;
-     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+     background-color: #F22E2E;
+     color: #F2F2F2;
+     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
      border-radius: 10px;
      font-weight: bold;
      font-size: 17px;

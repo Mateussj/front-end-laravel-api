@@ -12,7 +12,7 @@ export default function Card(props: any){
      return (
           <>
           <CardContainer id={props.id}>
-               <MdAddReaction size={50} color='black' />
+               <MdAddReaction className='icon' size={50} color='#F22E2E' />
                <ConteudoCard>
                     <CardContainerTitulo>{props.dados.user.nome}</CardContainerTitulo>
                     <ParagrafoContainer>{props.dados.conteudo}</ParagrafoContainer>                    

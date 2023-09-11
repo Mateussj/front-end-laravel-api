@@ -40,11 +40,11 @@ export const UlContainer = styled.ul`
 
 export const LiContainer = styled.li`
 
-     box-shadow: ${(props) => props.className === "active" ? 'rgba(0, 0, 0, 1.45) 0px 8px 0px -1px' : ''};
+     box-shadow: ${(props) => props.className === "active" ? '#F22E2E 0px 8px 0px -1px' : ''};
      cursor: pointer;
      whidth: 100%;
      margin: 60px;
      &:hover {
-          box-shadow: #005954 0px 8px 0px -1px;
+          box-shadow: #F26363 0px 8px 0px -1px;
      }
 `;

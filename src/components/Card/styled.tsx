@@ -8,7 +8,7 @@ export const ConteudoCard = styled.div`
      font-family: Arial,sans-serif;
 `;
 export const CardContainerTitulo = styled.p`
-     color: black;
+     color: #F29494;
      font-size: 20px;
      align-items: center;
      font-weight: bold;
@@ -27,9 +27,14 @@ export const CardContainer = styled.div`
      width: 1100px;
      height: 100px;
      overflow: hidden;
-     background-color: #c0c0c0;
      &:hover{
-          background-color: ##c0c0c0;
+          background-color: #F29494;
+          p {
+               color: white !important;
+          }
+          .icon {
+               color: white !important;
+          }
      }
 `;
 
@@ -45,7 +50,7 @@ export const ParagrafoContainer = styled.p`
      -webkit-line-clamp: 10; // Quantidade de linhas
      -webkit-box-orient: vertical; 
      margin-left: 15px;
-     color: black;
+     color: #0D0D0D;
 `;
 
 export const SpanContainer = styled.div`

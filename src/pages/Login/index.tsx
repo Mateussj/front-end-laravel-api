@@ -4,6 +4,7 @@ import { useAuth } from '../../contexts/auth';
 import { ButtonLogin, DivForm, DivPrincipal, FormLogin, H1Titulo, InputLogin } from './styled';
 import { MdWhatshot } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function SignIn(){
   const [email, setEmail] = useState('');
@@ -13,14 +14,16 @@ export default function SignIn(){
 
   const navigate = useNavigate();
   
-  function handleSubmit(e : any){
+  async function handleSubmit(e : any){
     e.preventDefault();
 
     if(email !== '' && password !== ''){
-      signIn(email, password);
-      navigate("/home");
+      const login = await signIn(email, password);
+      if(login){
+        navigate("/home");       
+      }
     } else {
-      console.log(signIn);
+      toast.error("Forneça todos campos de login necessários.");
     }
   }
 
@@ -29,7 +32,7 @@ export default function SignIn(){
       <DivForm className="login"> 
 
         <FormLogin onSubmit={handleSubmit}>
-          <H1Titulo><MdWhatshot size={150} color='white'/></H1Titulo> 
+          <H1Titulo><MdWhatshot size={150} color='#F2F2F2'/></H1Titulo> 
           <InputLogin
             type="text"
             placeholder="email@email.com"
@@ -44,7 +47,7 @@ export default function SignIn(){
             onChange={ (e) => setPassword(e.target.value)}
           />
           <ButtonLogin type="submit" >Acessar</ButtonLogin>
-          <Link to="/register" style={{color: 'white', boxShadow: '0px 0px 10px 10px rgba(0, 0, 0, 0.2)'}}> Criar uma conta</Link>
+          <Link to="/register" style={{color: '#F2F2F2', boxShadow: ''}}> Criar uma conta</Link>
         </FormLogin>
       </DivForm>
     </DivPrincipal>

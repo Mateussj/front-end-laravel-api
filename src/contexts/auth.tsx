@@ -14,8 +14,8 @@ interface User {
 interface AuthContextData {
   user: User | null;
   bearer: string | null;
-  signIn: (email: string, password: string) => Promise<void>;
-  signOut: () => void;
+  signIn: (email: string, password: string) => Promise<any>;
+  signOut: () => any;
   singned: () => any;
 }
 
@@ -53,7 +53,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         localStorage.setItem('@laragramUser', JSON.stringify(response.data.user));
         toast.success(`Seja Bem-vindo(a) ` + response.data.user.nome + ' !');     
     }).catch((error) => {
-      toast.error(`Houve um erro ao tentar realizar o login !`); 
+      toast.error(`Houve um erro ao tentar realizar o login, cheque suas credenciais !`); 
     });
 
     return user;
